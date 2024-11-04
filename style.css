@@ -4,7 +4,7 @@
   --rc-font-size-h1: 3.125em;
   --rc-font-size-h2: 2.1875em;
   --rc-font-size-h3: 1.5625em;
-  --rc-font-size-text: 1.25em;
+  --rc-font-size-text: 1em;
   --rc-font-size-link: 1.25em;
 
   /* Spacings */
@@ -41,14 +41,16 @@
   gap: var(--rc-gap-lg);
 }
 
+/* Header */
+
 #header {
   justify-content: space-between;
   gap: var(--rc-gap-sm);
-  padding: var(--rc-padding-sm);
+  padding: var(--rc-padding-sm) var(--rc-padding-lg);
 }
 
 nav{
-  width: 85%;
+  width: 80%;
 }
 
 #header ul{
@@ -57,4 +59,26 @@ nav{
 
 .menu {
   display: none;
+}
+
+/* Title */
+
+#title{
+  background-image: url(img/Portada.jfif);
+  background-size: cover;    
+  background-position: center;
+  background-repeat: no-repeat;
+  padding: var(--rc-padding-xl) var(--rc-padding-lg);
+  padding-bottom: 30%;
+  color: white;
+}
+
+#title h1{
+  font-size: var(--rc-font-size-h1);
+  font-weight: normal;
+}
+
+#title p{
+  font-family: sans-serif;
+  font-size: var(--rc-font-size-text);
 }
