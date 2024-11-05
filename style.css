@@ -1,5 +1,10 @@
 
 :root{
+
+  /* Fonts */
+  --rc-font-primary: sans-serif;
+  --rc-font-secondary: ;
+
   /* Font Sizes */
   --rc-font-size-h1: 3.125em;
   --rc-font-size-h2: 2.1875em;
@@ -8,7 +13,7 @@
   --rc-font-size-link: 1.25em;
 
   /* Spacings */
-  --rc-gap-xl: 50px;
+  --rc-gap-xl: 40px;
   --rc-gap-lg: 30px;
   --rc-gap-md: 20px;
   --rc-gap-sm: 10px;
@@ -31,6 +36,7 @@
   list-style: none;
   text-decoration: none;
   box-sizing: border-box;
+  font-family: var(--rc-font-primary);
 }
 
 .flex{
@@ -57,6 +63,10 @@ nav{
   justify-content: start;
 }
 
+nav a{
+  text-transform: uppercase;
+}
+
 .menu {
   display: none;
 }
@@ -76,9 +86,74 @@ nav{
 #title h1{
   font-size: var(--rc-font-size-h1);
   font-weight: normal;
+  font-family: auto;
 }
 
 #title p{
-  font-family: sans-serif;
   font-size: var(--rc-font-size-text);
 }
+
+/* Cars */
+
+#cars{
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(450px,1fr));
+  gap: var(--rc-gap-xl);
+  margin: 30px;
+}
+
+#cars h3{
+  font-size: var(--rc-font-size-h3);
+  font-weight: 500;
+  margin-bottom: 15px;
+}
+
+.car{
+  background-color: #D9D9D9;
+  border-radius: 10px;
+  padding: var(--rc-padding-lg);
+  gap: var(--rc-gap-sm);
+  justify-content: space-between;
+}
+
+.car > *{
+  width: 100%;
+}
+
+.car > a{
+  width: auto;
+  background-color: #FFFFFF;
+  padding: var(--rc-padding-md) var(--rc-padding-lg);
+  border-radius: 50px;
+  color: #000000;
+}
+
+.car > form{
+  width: auto;
+  gap: var(--rc-gap-sm);
+}
+
+input[type="radio"] {
+  display: none;
+}
+
+.radio-btn {  
+  border-radius: 100%;
+  cursor: pointer;
+  margin: 5px;
+  font-size: 16px;
+}
+
+label div{
+  width: 40px;
+  height: 40px;
+  border: 3px solid white;
+  border-radius: 100%;
+  margin: 5px;
+}
+
+input[type="radio"]:checked + label.radio-btn {
+  border: 1px solid #000000;
+  box-shadow: 0px 0px 3px #000000;
+}
+
