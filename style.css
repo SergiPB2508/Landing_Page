@@ -291,12 +291,64 @@ input[type="radio"]:checked + label.radio-btn {
 }
 
 #wheel_programme > div{
-  background-color: #949494;
   height: 100%;
+  align-items: start;
+  flex-direction: column;
 }
 
 #wheel_programme h2{
   margin-bottom: 20px;
-  font-size: 45px;
+  font-size: 3rem;
   font-weight: normal;
+  padding: 0 var(--rc-padding-lg);
+}
+
+#wheel_programme p{
+  width: 75%;
+  font-size: 1rem;
+  padding: 0 var(--rc-padding-lg);
+}
+
+/* Footer */
+
+footer{
+  background-color: #000000;
+  color: #FFFFFF;
+}
+
+#contact{
+  margin-bottom: 50px; 
+  background-color: #404243;
+  padding: var(--rc-padding-lg);
+  justify-content: space-evenly;
+}
+
+#contact p{
+  width: 45%;
+  font-size: 1rem;
+}
+
+#footer{
+  flex-direction: column;
+  gap: 100px;
+}
+
+#footer a{
+  background: none;
+  color: #FFFFFF;
+  padding: 0;
+}
+
+#f_menu{
+  width: 100%;
+  justify-content: space-between;
+  padding: 0 15%;
+}
+
+#f_menu > div{
+  width: 20%;
+  flex-direction: column;
+  gap: 0;
+  align-items: start;
+  justify-content: start;
 }
