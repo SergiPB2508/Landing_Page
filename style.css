@@ -314,6 +314,7 @@ input[type="radio"]:checked + label.radio-btn {
 footer{
   background-color: #000000;
   color: #FFFFFF;
+  width: 100%;
 }
 
 #contact{
@@ -330,7 +331,7 @@ footer{
 
 #footer{
   flex-direction: column;
-  gap: 100px;
+  gap: 50px;
 }
 
 #footer a{
@@ -339,10 +340,76 @@ footer{
   padding: 0;
 }
 
+#newsletter{
+  flex-direction: column;
+}
+
+#sub{
+  border: 1px solid #FFFFFF;
+  border-radius: 50px;
+  display: flex;
+  margin: 25px 0;
+}
+
+#sub > input{
+  width: 100%;
+  text-align: center;
+  background: none;
+  border: 0;
+  color: #FFFFFF;
+}
+
+#sub > input:focus{
+  border-radius: 50px;
+}
+
+button{
+  background-color: #FFFFFF;
+  padding: var(--rc-padding-md) var(--rc-padding-lg);
+  border-radius: 50px;
+  color: #000000;
+  text-align: center;
+  border: 0;
+}
+
+input[type="checkbox"] {
+  display: none;
+}
+
+.custom-checkbox {
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  background-color: #000000;
+  border: 1px solid #FFFFFF;
+  border-radius: 3px;
+  position: relative;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  margin-right: 10px;
+}
+
+input[type="checkbox"]:checked + .custom-checkbox::after {
+  content: "";
+  position: absolute;
+  left: 4px;
+  top: 0;
+  width: 6px;
+  height: 12px;
+  border: solid #fff;
+  border-width: 0 2px 2px 0;
+  transform: rotate(45deg);
+}
+
+label > a{
+  text-decoration: underline;
+}
+
 #f_menu{
   width: 100%;
   justify-content: space-between;
-  padding: 0 15%;
+  padding: 50px 15%;
+  align-items: start;
 }
 
 #f_menu > div{
@@ -351,4 +418,22 @@ footer{
   gap: 0;
   align-items: start;
   justify-content: start;
+}
+
+#f_menu p{
+  padding-bottom: 15px;
+}
+
+#f_menu a{
+  color: #FFFFFF60;
+}
+
+#scroll_button{
+  width: 100%;
+  text-align: end;
+  padding: 1.5rem;
+}
+#scroll_button > a{
+  background: none;
+  padding: 0;
 }
