@@ -88,6 +88,43 @@ nav a{
   display: none;
 }
 
+
+@media (max-width:650px) {
+
+  #header{
+    padding: var(--rc-padding-sm) var(--rc-padding-md);
+  }
+
+  .menu{
+    display: block;
+    cursor: pointer;
+  }
+
+  #logo{
+    margin-right: 40%;
+    gap: 5px;
+  }
+
+  nav{ 
+    display: none; 
+    position: absolute;
+    min-width: 160px;
+    z-index: 1;
+    background-color: #FFFFFF;
+    right: 0;
+  }
+
+  .menu:hover > nav{
+    display: block;
+  }
+
+  nav > ul{
+    flex-direction: column;
+    padding: var(--rc-padding-md);
+  }
+
+}
+
 /* Title */
 
 #title{
@@ -108,6 +145,20 @@ nav a{
 
 #title p{
   font-size: var(--rc-font-size-text);
+}
+
+@media (max-width:650px) {
+  #title{
+    padding: var(--rc-padding-sm);
+    padding-top: 30%;
+
+  }
+
+  #title h1{
+    font-size: 2rem;
+    font-weight: normal;
+    font-family: var(--rc-font-secondary);
+  }
 }
 
 /* Cars */
@@ -168,6 +219,28 @@ input[type="radio"]:checked + label.radio-btn {
   box-shadow: 0px 0px 3px #000000;
 }
 
+@media (max-width:650px) {
+  #cars{
+    grid-template-columns: auto;
+    gap: var(--rc-gap-sm);
+    margin: 10px;
+  }
+
+  .car{
+    justify-content: center;
+  }
+
+  .car > *{
+    text-align: center;
+  }
+
+  .car form{
+    display: none;
+  }
+
+
+}
+
 /* Mercedes Dealer */
 
 #mercedes-dealer{
@@ -178,13 +251,26 @@ input[type="radio"]:checked + label.radio-btn {
   font-size: 5rem;
   font-weight: normal;
   font-family: var(--rc-font-secondary);
-  width: 65%;
-  margin-bottom: 30px;
 }
 
 #mercedes-dealer p{
-  width: 35%;
+  width: 478px;
   font-size: 1.5rem;
+  margin-top: 30px;
+}
+
+@media (max-width:650px) {
+  #mercedes-dealer > *{
+    text-align: center;
+  }
+  #mercedes-dealer p{
+    width: auto;
+  }
+
+  #mercedes-dealer h2{
+    font-size: 2.5rem;
+  }
+
 }
 
 /* Store */
@@ -202,7 +288,7 @@ input[type="radio"]:checked + label.radio-btn {
   margin-left: 70px;
   padding: var(--rc-padding-lg);
   padding-bottom: 45px;
-  width: 32%;
+  width: 456px;
   border-radius: 15px;
   position: absolute;
   top: 30%;
@@ -213,6 +299,27 @@ input[type="radio"]:checked + label.radio-btn {
   font-size: 50px;
   color: white;
   font-weight: normal;
+}
+
+@media (max-width:650px) {
+  #store{
+    height: auto;
+    padding: 30px 15px;
+  }
+
+  #store > div{
+    width: auto;
+    height: auto;
+    top: auto;
+    margin: 0;
+    position: relative;
+  }
+
+  #store h2{
+    font-size: 2.5rem;
+    text-align: center;
+    margin-bottom: 70px;
+  }
 }
 
 /* News */
@@ -235,7 +342,7 @@ input[type="radio"]:checked + label.radio-btn {
 
 .card img{
   width: 100%;
-  height: 270px;
+  max-height: 270px;
 }
 
 .slidebar{
@@ -249,6 +356,24 @@ input[type="radio"]:checked + label.radio-btn {
   background-color: #949494;
   border-radius: 50px;
   width: 25%;
+}
+
+@media (max-width:650px) {
+  #news > div{
+    margin: 20px 30px;
+  }
+
+  .card{
+    min-width: 290px;
+    align-items: center;
+    padding: var(--rc-padding-sm);
+  }
+  
+  .card img{
+    width: 100%;
+    height: 170px;
+  }
+  
 }
 
 /* Car Red */
@@ -277,6 +402,41 @@ input[type="radio"]:checked + label.radio-btn {
 #car_red p{
   width: 45%;
   font-size: 0.8rem;
+}
+
+#car_red img{
+  display: none;
+}
+
+@media (max-width: 650px){
+  #car_red{
+    background: none;
+    background-color: #A2A2A250;
+    color: #000000;
+    height: auto;
+  }
+
+  #car_red > div{
+    width: auto;
+    left: auto;
+    bottom: auto;
+    position: relative;
+    padding: 20px 30px;
+  }
+  
+  #car_red h2{
+    font-size: 1.3rem;
+    text-align: center;
+  }
+  
+  #car_red p{
+    width: auto;
+  }
+  
+  #car_red img{
+    display: block;
+    width: 100%;
+  }
 }
 
 /* Wheel Programme */
@@ -309,12 +469,53 @@ input[type="radio"]:checked + label.radio-btn {
   padding: 0 var(--rc-padding-lg);
 }
 
+#wheel_programme > div > img{
+  display: none;
+  width: 100%;
+  border-radius: 10px;
+}
+
+@media (max-width:650px) {
+  
+  #wheel_programme{
+    justify-content: space-between;
+    margin: 20px;
+  }
+
+  #wheel_programme > *{
+    width: 100%;
+  }
+
+  #wheel_programme > div{
+    align-items: center;
+  }
+
+  #wheel_programme h2{
+    margin-bottom: 0;
+    font-size: 1.5rem;
+    padding: 0;
+    text-align: center;
+  }
+
+  #wheel_programme p{
+    width: 100%;
+    padding: 0;
+  }
+
+  #wheel_programme > img{
+    display: none;
+  }
+
+  #wheel_programme > div > img{
+    display: block;
+  }
+}
+
 /* Footer */
 
 footer{
   background-color: #000000;
   color: #FFFFFF;
-  width: 100%;
 }
 
 #contact{
@@ -342,6 +543,7 @@ footer{
 
 #newsletter{
   flex-direction: column;
+  margin: 20px;
 }
 
 #sub{
@@ -378,7 +580,7 @@ input[type="checkbox"] {
 
 .custom-checkbox {
   display: inline-block;
-  width: 20px;
+  min-width: 20px;
   height: 20px;
   background-color: #000000;
   border: 1px solid #FFFFFF;
@@ -386,7 +588,6 @@ input[type="checkbox"] {
   position: relative;
   cursor: pointer;
   transition: background-color 0.3s;
-  margin-right: 10px;
 }
 
 input[type="checkbox"]:checked + .custom-checkbox::after {
@@ -401,7 +602,13 @@ input[type="checkbox"]:checked + .custom-checkbox::after {
   transform: rotate(45deg);
 }
 
-label > a{
+#priv{
+  gap: var(--rc-gap-sm);
+  flex-wrap: nowrap;
+  width: 100%;
+}
+
+#priv a{
   text-decoration: underline;
 }
 
@@ -426,6 +633,7 @@ label > a{
 
 #f_menu a{
   color: #FFFFFF60;
+  text-align: start;
 }
 
 #scroll_button{
@@ -433,7 +641,29 @@ label > a{
   text-align: end;
   padding: 1.5rem;
 }
+
 #scroll_button > a{
   background: none;
   padding: 0;
+}
+
+@media (max-width:650px) {
+  #contact p{
+    width: 100%;
+    text-align: center;
+  }
+
+  #f_menu{
+    align-items: center;
+    flex-direction: column;
+  }
+  
+  #f_menu a{
+    text-align: center;
+  }
+
+  #f_menu > div{
+    width: auto;
+    align-items: center;
+  }
 }

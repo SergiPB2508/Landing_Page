@@ -14,7 +14,7 @@
 </head>
 <body>
     <header id="header" class="flex">
-        <img src="img/logo.png" alt="Logo Mercedes">
+        <img src="img/logo.png" alt="Logo Mercedes" id="logo">
         <nav>
             <ul class="flex">
                 <li><a href="">Electric</a></li>
@@ -25,7 +25,17 @@
         </nav>
         <img src="img/persona.png" alt="Usuario">
         <img src="img/cesta.png" alt="Cesta">
-        <img src="img/menu.png" alt="Menu" class="menu">
+        <div class="menu">
+            <img src="img/menu.png" alt="Menu">
+            <nav>
+                <ul class="flex">
+                    <li><a href="">Electric</a></li>
+                    <li><a href="">Maybach</a></li>
+                    <li><a href="">Accessories</a></li>
+                    <li><a href="">Stores</a></li>
+                </ul>
+            </nav>
+        </div>
     </header>
     <main>
         <section id="title">
@@ -102,7 +112,8 @@
             </div>
         </section>
         <section id="mercedes-dealer">
-            <h2>Find your nearest Mercedes dealer you.</h2>
+            <h2>Find your nearest</h2>
+            <h2>Mercedes dealer you.</h2>
             <p>Browse over 1000 dealers worldwide, and find the one that best suits your situation.</p>
         </section>
         <section id="store">
@@ -132,6 +143,7 @@
             <div class="slidebar"><div class="bar"></div></div>
         </section>
         <section id="car_red">
+            <img src="img/Coche_casa.png" alt="Car Red">
             <div>
                 <h2>Red as tentation</h2>
                 <p>Good design is what drives us, and we're
@@ -144,10 +156,11 @@
         <section id="wheel_programme" class="flex">
             <div class="flex">
                 <h2>The Mercedes-Maybach wheel programme</h2>
+                <img src="img/rueda.png" alt="Wheel">
                 <p>The exclusive Mercedes-Maybach wheel programme, e.g. with optional 53.3 cm (21") Maybach forged wheels in multi-spoke design.</p>
                 <a href="">Learn more</a>
             </div>
-            <img src="img/rueda.png" alt="">
+            <img src="img/rueda.png" alt="Wheel">
         </section>
     </main>
     <footer>
@@ -160,15 +173,15 @@
             <div id="newsletter" class="flex">
                 <h3>Join the power.</h3>
                 <p>Sign up for our newsletter.</p>
-                <form action="">
+                <form>
                     <div id="sub">
-                        <input type="email" name="" id="email" placeholder="Enter your email address here">
+                        <input type="email" name="email" id="email" placeholder="Enter your email address here">
                         <button>Subscibe</button>
                     </div>
-                    <label for="privacy">
+                    <label for="privacy" id="priv" class="flex">
                         <input type="checkbox" name="privacy" id="privacy">
                         <span class="custom-checkbox"></span>
-                        By signing up, I agree to the <a href="">privacy policy</a> of Veloretti.
+                        <p>By signing up, I agree to the <a href="">privacy policy</a> of Veloretti.</p>
                     </label>
                     
                 </form>
