@@ -165,7 +165,7 @@ nav a{
 
 #cars{
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(450px,1fr));
+  grid-template-columns: repeat(auto-fit, minmax(480px,1fr));
   gap: var(--rc-gap-xl);
   margin: 30px;
 }
@@ -206,7 +206,8 @@ input[type="radio"] {
   font-size: 16px;
 }
 
-label div{
+.radio-btn span{
+  display: block;
   width: 40px;
   height: 40px;
   border: 3px solid white;
@@ -324,11 +325,13 @@ input[type="radio"]:checked + label.radio-btn {
 
 /* News */
 
-#news > div{
+#news{
+  margin: 20px;
   justify-content: start;
   flex-wrap: nowrap;
-  margin: 20px;
   gap: var(--rc-gap-xl);
+  overflow-x: auto;
+  overflow-y: hidden;
 }
 
 .card{
@@ -338,6 +341,7 @@ input[type="radio"]:checked + label.radio-btn {
   flex-direction: column;
   align-items: start;
   border-radius: 10px;
+  margin-bottom: 20px;
 }
 
 .card img{
@@ -345,26 +349,24 @@ input[type="radio"]:checked + label.radio-btn {
   max-height: 270px;
 }
 
-.slidebar{
-  padding: 4px;
+#news::-webkit-scrollbar{
   background-color: #D9D9D9;
   border-radius: 50px;
 }
 
-.bar{
-  padding: 5px;
+#news::-webkit-scrollbar-thumb{
   background-color: #949494;
   border-radius: 50px;
-  width: 25%;
+  border: 2px solid #D9D9D9;
 }
 
 @media (max-width:650px) {
-  #news > div{
+  #news{
     margin: 20px 30px;
   }
 
   .card{
-    min-width: 290px;
+    min-width: 310px;
     align-items: center;
     padding: var(--rc-padding-sm);
   }
